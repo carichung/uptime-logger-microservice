@@ -1,0 +1,21 @@
+version: '3.8'
+
+# build image for the uptime service
+services:
+  
+  # assign a service name
+  uptime-service:
+    
+    # build context is current directory
+    build:
+      context: .
+
+    container_name: uptime-service
+    
+    # start port in 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+
+ 
