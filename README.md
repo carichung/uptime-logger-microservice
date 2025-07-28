@@ -15,7 +15,7 @@ A cloud-ready microservice built with **FastAPI**, **Docker**, and **Terraform**
 ---
 
 ## Architecture
-
+```
 [User/Browser]
 |
 v
@@ -23,49 +23,56 @@ v
 |
 v
 [AWS EC2] (Provisioned by Terraform)
-
+```
 
 ---
 
 ## Quick Start (Local Development)
 
-**Clone the repo:**
+1, Clone the repo:
 git clone https://github.com/carichung/uptime-logger-microservice.git
 cd uptime-logger-microservice
-Run locally with Docker Compose:
 
+2, Run locally with Docker Compose:
 docker compose up --build
 Visit: http://localhost:8000/check-uptime
 
-Cloud Deployment (AWS Example)
-Build and push your Docker image to Docker Hub:
+---
 
+## Cloud Deployment (AWS Example)
+1, Build and push your Docker image to Docker Hub:
 docker login
 docker tag uptime-logger YOUR_DOCKERHUB_USERNAME/uptime-logger:latest
 docker push YOUR_DOCKERHUB_USERNAME/uptime-logger:latest
 
-Configure your AWS key pair and find a valid Ubuntu AMI for your region.
+2, Configure your AWS key pair and find a valid Ubuntu AMI for your region.
 
-Edit infra-terraform/main.tf:
-
+3, Edit infra-terraform/main.tf:
 Update the AMI ID, key name, and Docker image as above.
 
-Deploy with Terraform:
-
+4, Deploy with Terraform:
+```
 cd infra-terraform
 terraform init
 terraform apply
-Access your app:
+```
+
+5, Access your app:
 http://<EC2_PUBLIC_IP>:8000/check-uptime
 
-Configuration
-URLs to monitor:
+---
+
+## Configuration
+
+1, URLs to monitor:
 Edit the urls_to_monitor list in app/main.py.
 
-Database:
+2, Database:
 Default is SQLite. For production, you can switch to RDS/PostgreSQL.
 
-File Structure
+---
+
+## File Structure
 ```
 uptime-logger-microservice/
 ├── app/
@@ -78,19 +85,11 @@ uptime-logger-microservice/
 └── infra-terraform/
     └── main.tf
 ```
+---
 
-Author
-Name: Cari (GitHub)
-
-Role: Cloud Engineering Student
-
-    
-
-
-Author
+## Author
 Name: Cari (GitHub)
 Role: Cloud Student
-
 
 License
 MIT
