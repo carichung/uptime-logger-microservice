@@ -1,4 +1,4 @@
-# Uptime Logger Microservice 🚦
+# Uptime Logger Microservice 
 
 A cloud-ready microservice built with **FastAPI**, **Docker**, and **Terraform** for logging and monitoring website uptime. Easily deployable to AWS EC2 with full Infrastructure as Code.
 
