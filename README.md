@@ -88,7 +88,7 @@ uptime-logger-microservice/
 ---
 
 ## Author
-Name: Cari (GitHub)
+Name: Cari (GitHub)  
 Role: Cloud Student
 
 License
