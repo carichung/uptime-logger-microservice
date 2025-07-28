@@ -66,19 +66,17 @@ Database:
 Default is SQLite. For production, you can switch to RDS/PostgreSQL.
 
 File Structure
-css
-Copy
-Edit
+
 uptime-logger-microservice/
-├── app/
-│   ├── __init__.py
-│   ├── main.py
-│   ├── database.py
-│   └── requirements.txt
-├── Dockerfile
-├── docker-compose.yml
-└── infra-terraform/
-    └── main.tf
+app/
+__init__.py
+main.py
+database.py
+requirements.txt
+Dockerfile
+docker-compose.yml
+infra-terraform/
+main.tf
     
 
 
